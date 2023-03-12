@@ -31,7 +31,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
 
   #get variable list
   var <- getVariables(levels(rep$variable))
-  var <- var[var != "Biodiversity|BII"]
+  #var <- var[var != "Biodiversity|BII"]
 
   #sub-setting variables, regions and years
   b <- rep[variable %in% var & region == regionSel & period == 2050, ]
@@ -67,20 +67,21 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
 
 
   # greying out non-nutrition scenarios
-  b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
-                     "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP",
+  b <- b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
+                     "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP", "InclusiveGrowth",
+                     "NoUnderweight&HalfOverweight","SocioEconTrans","FSDP-China",
                      "NoOverweight", "HalfOverweight", "NoUnderweight", "AllHealth", "DietRotations",
                      "Population", "ExternalPressures", "AllInclusion", "Diet",
                      "EconDevelop", "DietHealth") &
-      get("variableName") %in% c("Underweight",
-                      "Obesity"),
+      variable %in% paste(c("Underweight", "Obesity"), "mio people", sep = "\n"),
     c("valuefill","value") := NA]
 
   # greying out non-inclusion scenarios
   b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                      "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP",
+                     "SocioEconTrans","FSDP-China","InclusiveGrowth",
                      "ExternalPressures", "AllInclusion", "EconDevelop", "MinWage") &
-      get("variableName") %in% c("Agri. wages"),
+     variable %in% paste("Agric. wages", "Index rel. to 2010", sep = "\n"),
     c("valuefill","value") := NA]
 
   # Adding and greying-out years of life lost for non-dietary scenarios
@@ -159,6 +160,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
       textElement[i] <- list(element_text(angle = 90, face = "bold"))
     }
   }
+
 
   b$scenGroup <- factor(b$scenGroup,levels = scenGroupOrder)
   b$scenario <- factor(b$scenario,levels = scenarioOrder,ordered = TRUE)

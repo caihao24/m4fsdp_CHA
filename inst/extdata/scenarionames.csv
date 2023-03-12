@@ -8,37 +8,46 @@ DietLegumes;HighLegumes
 DietMonogastrics;LowMonogastrics
 DietRuminants;LowRuminants
 DietVegFruitsNutsSeeds;HighVegFruitsNuts
+DietCDG;DietCDG
 NoOverweight;NoOverweight
 HalfOverweight;HalfOverweight
 NoUnderweight;NoUnderweight
+NoUnderweight&HalfOverweight; NoUnderweight&HalfOverweight
 LessFoodWaste;LowFoodWaste
 Livelihoods;Livelihoods
 LiberalizedTrade;LibTrade
 MinWage;MinWage
 CapitalSubst;CapitalSubst
 NatureSparing;Biosphere
+EnvSustainability; SustEnvironment
 REDDaff;REDD+
 LandSparing;LandSparing
 PeatlandSparing;PeatlandSparing
 WaterSparing;WaterSparing
 BiodivSparing;BiodivSparing
 AgroMngmt;Agriculture
+AgroMitigation;AgroMitigation
 NitrogenEff;NitrogenEff
 CropRotations;CropRotations
 LandscapeElements;LandscapeElements
+LandSparing&Scape;LandSparing&LandScape
 RiceMit;RiceMitigation
 LivestockMngmt;LivestockMngmt
 ManureMngmt;ManureMngmt
 SoilCarbon;SoilCarbon
 ExternalPressures;ExtTransformation
+InclusiveGrowth;InclusiveGrowth
 Population;Population
 EconDevelop;EconDevelop
+SocioEconTrans;SocioEconTrans
 EnergyTrans;EnergyTrans
 Bioplastics;Bioplastics
 TimberCities;TimberCities
+Bioplastics&TimberCities;Bioplastics&TimberCities
 SSP2fsdp;allFSMs
 BAU;SSP2 BAU
 FSDP;FSDP
+FSDP-China;FSDP-China
 SSP1bau;SSP1 BAU
 SSP2bau;SSP2 BAU
 SSP3bau;SSP3 BAU
