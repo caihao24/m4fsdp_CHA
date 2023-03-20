@@ -76,6 +76,16 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
       variable %in% paste(c("Underweight", "Obesity"), "mio people", sep = "\n"),
     c("valuefill","value") := NA]
 
+
+  b <- b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
+                          "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP", "InclusiveGrowth",
+                          "NoUnderweight&HalfOverweight","SocioEconTrans","FSDP-China","DietCDG",
+                          "NoOverweight", "HalfOverweight", "NoUnderweight", "AllHealth", "DietRotations",
+                          "Population", "ExternalPressures", "AllInclusion", "Diet",
+                          "EconDevelop", "DietHealth") &
+           variable %in% paste(c("Chinese Healthy Eating Index", "EAT-Lancet Diet Index"), "index", sep = "\n"),
+          c("valuefill","value") := NA]
+
   # greying out non-inclusion scenarios
   b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                      "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP",
