@@ -69,7 +69,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
   # greying out non-nutrition scenarios
   b <- b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                      "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP", "InclusiveGrowth",
-                     "NoUnderweight&HalfOverweight","SocioEconTrans","FSDP-China",
+                     "NoUnderweightHalfOverweight","SocioEconTrans","FSDP-China",
                      "NoOverweight", "HalfOverweight", "NoUnderweight", "AllHealth", "DietRotations",
                      "Population", "ExternalPressures", "AllInclusion", "Diet",
                      "EconDevelop", "DietHealth") &
@@ -79,7 +79,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
 
   b <- b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                           "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP", "InclusiveGrowth",
-                          "NoUnderweight&HalfOverweight","SocioEconTrans","FSDP-China","DietCDG",
+                          "NoUnderweightHalfOverweight","SocioEconTrans","FSDP-China","DietCDG",
                           "NoOverweight", "HalfOverweight", "NoUnderweight", "AllHealth", "DietRotations",
                           "Population", "ExternalPressures", "AllInclusion", "Diet",
                           "EconDevelop", "DietHealth") &
@@ -124,7 +124,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
 
   # greying out scenarios without remind
   b[scenario %in% c("SSP3bau", "SSP4bau", "SSP5bau",
-                     "SSP3fsdp", "SSP4fsdp", "SSP5fsdp",
+                     "SSP3fsdp", "SSP4fsdp", "SSP5fsdp","SocioEconTrans","BioplasticsTimberCities",
                      "Population", "EconDevelop", "TimberCities", "Bioplastics",
                      "ExternalPressures") &
       get("variableName") %in% c("Global Surface Temp"),

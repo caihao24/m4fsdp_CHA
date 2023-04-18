@@ -12,7 +12,7 @@ DietCDG;DietCDG
 NoOverweight;NoOverweight
 HalfOverweight;HalfOverweight
 NoUnderweight;NoUnderweight
-NoUnderweight&HalfOverweight; NoUnderweight&HalfOverweight
+NoUnderweightHalfOverweight; NoUnderweightHalfOverweight
 LessFoodWaste;LowFoodWaste
 Livelihoods;Livelihoods
 LiberalizedTrade;LibTrade
@@ -30,7 +30,7 @@ AgroMitigation;AgroMitigation
 NitrogenEff;NitrogenEff
 CropRotations;CropRotations
 LandscapeElements;LandscapeElements
-LandSparing&Scape;LandSparing&LandScape
+LandSparingLandScape;LandSparingLandScape
 RiceMit;RiceMitigation
 LivestockMngmt;LivestockMngmt
 ManureMngmt;ManureMngmt
@@ -43,7 +43,7 @@ SocioEconTrans;SocioEconTrans
 EnergyTrans;EnergyTrans
 Bioplastics;Bioplastics
 TimberCities;TimberCities
-Bioplastics&TimberCities;Bioplastics&TimberCities
+BioplasticsTimberCities;BioplasticsTimberCities
 SSP2fsdp;allFSMs
 BAU;SSP2 BAU
 FSDP;FSDP

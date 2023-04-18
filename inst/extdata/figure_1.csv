@@ -2,18 +2,18 @@ modelrun;bundle;bold
 SSP2 2050;A;1
 Diet;Diets;1
 DietCDG;Diets;
-NoUnderweight&HalfOverweight;Diets;
+NoUnderweightHalfOverweight;Diets;
 LessFoodWaste;Diets;
 InclusiveGrowth;InclusiveGrowth;1
 SocioEconTrans;InclusiveGrowth;
 EnergyTrans;InclusiveGrowth;
-Bioplastics&TimberCities;InclusiveGrowth;
+BioplasticsTimberCities;InclusiveGrowth;
 LiberalizedTrade;InclusiveGrowth;
 MinWage;InclusiveGrowth;
 CapitalSubst;InclusiveGrowth;
 EnvSustainability;SustEnvironment;1;
 REDDaff;SustEnvironment;
-LandSparing&Scape;SustEnvironment;
+LandSparingLandScape;SustEnvironment;
 WaterSparing;SustEnvironment;
 BiodivSparing;SustEnvironment;
 NitrogenEff;SustEnvironment;
