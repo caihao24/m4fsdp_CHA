@@ -21,7 +21,7 @@ getVariables <- function(reportVariables = NULL) {
            "Biodiversity|Shannon crop area diversity index",
            "Resources|Nitrogen|Nutrient surplus from land and manure management",
            "Water|Environmental flow violation volume",
-           "Emissions|GWP100AR6|Land|Cumulative",
+           "Emissions|GWP100AR6|Land",
            "Global Surface Temperature",
            "Household Expenditure|Food|Expenditure",
            "Income|Number of People Below 3p20 USDppp11/day",
@@ -39,19 +39,19 @@ getVariables <- function(reportVariables = NULL) {
                   "Health|5|EAT-Lancet Diet Index|index|increase|2|1",
                   "Environment|4.1|All Land Types|Biodiv. Intactness Index|increase|2|100",
                   "Environment|4.2|Cropland Landscapes|Biodiv. Intactness Index|increase|2|100",
-                  "Environment|4.3|Hotspot Lanscapes|Biodiv. Intactness Index|increase|2|100",
+                  "Environment|4.3|Hotspot Landscapes|Biodiv. Intactness Index|increase|2|100",
                   "Environment|5|Croparea Diversity|Shannon Index|increase|2|1",
                   "Environment|6|Nitrogen Surplus|Mt N/yr|decrease|0|1",
                   "Environment|7|Env. Water Flow Violations|km3/yr|decrease|0|1",
-                  "Environment|8|Cumul. GHG Emissions|GtCO2eq since 2000|decrease|0|1",
-                  "Environment|9|Global Surface Warming|degree Celsius|decrease|2|1",
-                  "Inclusion|10|Expenditures for Agric.|USD/person|decrease|0|1",
-                  "Inclusion|11|People below 3.20$/Day|mio people|decrease|0|1",
-                  "Inclusion|12|Agric. Employment|mio people|increase|0|1",
-                  "Inclusion|12|Agric. Employment|mio people|increase|0|1",
-                  "Inclusion|13|Agric. Wages|Index rel. to 2010|increase|2|1",
-                  "Economy|14|Bioeconomy Supply|billion US$05/yr|increase|0|0.001",
-                  "Economy|15|Costs|billion US$05/yr|decrease|0|0.001")
+                  "Environment|8|GHG Emissions|GtCO2eq/yr|decrease|1|1",
+                  "Environment|9|Global Surface Warming|Degree Celsius|decrease|2|1",
+                  "Inclusion|10|Ag. Expenditures|USD/person/yr|decrease|0|1",
+                  "Inclusion|11|Poverty|Mio people below 3.20$/day|decrease|0|1",
+                  "Inclusion|12|Ag. Employment|Mio people|increase|0|1",
+                  "Inclusion|12|Ag. Employment|Mio people|increase|0|1",
+                  "Inclusion|13|Ag. Wages|Index rel. to 2010|increase|2|1",
+                  "Economy|14|Bioeconomy Supply|Billion US$05/yr|increase|0|0.001",
+                  "Economy|15|Production Costs|Billion US$05/yr|decrease|0|0.001")
 
   if (is.null(reportVariables)) {
     return(var)

@@ -69,7 +69,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
   # greying out non-nutrition scenarios
   b <- b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                      "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP", "InclusiveGrowth",
-                     "NoUnderweightHalfOverweight","SocioEconTrans","FSDP-China",
+                     "NoUnderweightHalfOverweight","SocioEconTrans","FSDPChina",
                      "NoOverweight", "HalfOverweight", "NoUnderweight", "AllHealth", "DietRotations",
                      "Population", "ExternalPressures", "AllInclusion", "Diet",
                      "EconDevelop", "DietHealth") &
@@ -79,7 +79,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
 
   b <- b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                           "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP", "InclusiveGrowth",
-                          "NoUnderweightHalfOverweight","SocioEconTrans","FSDP-China","DietCDG",
+                          "NoUnderweightHalfOverweight","SocioEconTrans","FSDPChina","DietCDG",
                           "NoOverweight", "HalfOverweight", "NoUnderweight", "AllHealth", "DietRotations",
                           "Population", "ExternalPressures", "AllInclusion", "Diet",
                           "EconDevelop", "DietHealth") &
@@ -89,7 +89,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
   # greying out non-inclusion scenarios
   b[!scenario %in% c("BAU", "SSP1bau", "SSP2bau", "SSP3bau", "SSP4bau", "SSP5bau",
                      "SSP1fsdp", "SSP2fsdp", "SSP3fsdp", "SSP4fsdp", "SSP5fsdp", "FSDP",
-                     "SocioEconTrans","FSDP-China","InclusiveGrowth",
+                     "SocioEconTrans","FSDPChina","InclusiveGrowth",
                      "ExternalPressures", "AllInclusion", "EconDevelop", "MinWage") &
      variable %in% paste("Agric. wages", "Index rel. to 2010", sep = "\n"),
     c("valuefill","value") := NA]
@@ -103,7 +103,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
     as.character()
 
   haveYLLScenarios <- tb %>%
-    filter(.data$variableName == "Years of life lost") %>%
+    filter(.data$variableName == "Premature Mortality") %>%
     pull(.data$scenario) %>%
     unique() %>%
     as.character()
@@ -113,7 +113,7 @@ heatmapFSDP <- function(repReg, regionSel = "GLO", tableType = 1, file = NULL, w
   tb <- tb %>%
     filter(.data$scenario == "BAU",
            .data$period == "2050",
-           .data$variableName %in% "Years of life lost") %>%
+           .data$variableName %in% "Premature Mortality") %>%
     select(-"scenario")
 
   tb <- tidyr::expand_grid(tb, scenario = nonDietaryScenarios) %>%
